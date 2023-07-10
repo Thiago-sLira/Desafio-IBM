@@ -90,36 +90,3 @@
   <li><code>Exception("Candidato já está aprovado!")</code>: Lançada ao tentar aprovar um candidato que já está aprovado.</li>
   <li><code>Exception("Candidato não qualificado para aprovação!")</code>: Lançada ao tentar aprovar um candidato que não está qualificado.</li>
 </ul>
-
-<h2>Exemplo de Uso</h2>
-
-<p>Aqui está um exemplo de uso da classe <code>Segundo</code>:</p>
-
-<pre>
-<code>Segundo processoSeletivo = new Segundo();
-
-try {
-    int codigoCandidato1 = processoSeletivo.iniciarProcesso("João");
-    int codigoCandidato2 = processoSeletivo.iniciarProcesso("Maria");
-
-    processoSeletivo.marcarEntrevista(codigoCandidato1);
-    processoSeletivo.marcarEntrevista(codigoCandidato2);
-
-    String statusCandidato1 = processoSeletivo.verificarStatusCandidato(codigoCandidato1);
-    String statusCandidato2 = processoSeletivo.verificarStatusCandidato(codigoCandidato2);
-
-    System.out.println("Status do Candidato 1: " + statusCandidato1);
-    System.out.println("Status do Candidato 2: " + statusCandidato2);
-
-    processoSeletivo.aprovarCandidato(codigoCandidato1);
-    processoSeletivo.desqualificarCandidato(codigoCandidato2);
-
-    List&lt;String&gt; aprovados = processoSeletivo.obterAprovados();
-
-    System.out.println("Candidatos Aprovados: " + aprovados);
-} catch (Exception e) {
-    System.out.println("Ocorreu um erro: " + e.getMessage());
-}</code>
-</pre>
-
-<p>Este é apenas um exemplo básico de uso da classe <code>Segundo</code>. Certifique-se de adaptar o código ao contexto específico do seu projeto.</p>
